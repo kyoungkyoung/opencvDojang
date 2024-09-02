@@ -9,6 +9,11 @@
 
 import os
 
-diskLabel = '/Users/wonkyoung/opencv/opencvDojang'
-print(os.path.getsize(diskLabel))
+# 폴더 만들기
+# os.mkdir()
+
+# 폴더 용량 읽기
+def readDir():
+    diskLabel = '/Users/wonkyoung/opencv/opencvDojang'
+    print(os.path.getsize(diskLabel))
 

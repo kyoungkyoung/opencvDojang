@@ -1,6 +1,6 @@
 # 이미지 불러오기 : 동일
 # opencv 패키지의 특성과 matplotlib 패키지의 특성의 차이를 이해
-# 이미지 출력하기 : cv.imshow() -> plt.imshow()
+# 이미지 출력하기 : cv2.imshow() -> plt.imshow()
 
 import cv2
 import sys

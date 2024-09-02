@@ -6,7 +6,9 @@ import sys
 fileName = "data/cat.jpg"
 
 # 이미지 불러오기
-img = cv2.imread(fileName)
+img = cv2.imread(fileName) 
+print(type(img))
+
 print(img.shape)
 
 # 예외처리 루틴 : 이미지를 불러오지 못했을 때 -> 반드시 예외처리를 해줘야 함
@@ -17,10 +19,10 @@ if img is None:
     
 # 창에 이미지를 출력
 # 창의 이름을 img
-cv2.namedWindow('img')
+cv2.namedWindow('This is img window')
 
 # img창에 Img배열을 출력
-cv2.imshow('img', img)
+cv2.imshow('This is img window', img)
 
 # 키보드 입력을 기다리는 함수
 # inKey = cv2.waitKey()
@@ -39,11 +41,11 @@ cv2.imwrite('cat2.jpg', img, [cv2.IMWRITE_JPEG_QUALITY, 95])
 loop = True
 while(loop):
     inKey = cv2.waitKey()
-    print(inKey)
+    # print(inKey)
     if inKey == ord('q'):
-        print('왜 안오냐고오오오오오오')
+        # print('왜 안오냐고오오오오오오')
         # img 창만 닫기
-        cv2.destroyWindow('img')
+        cv2.destroyWindow('This is img window')
         loop = False
 
 # 모든 창 닫기
