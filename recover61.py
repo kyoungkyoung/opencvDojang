@@ -73,7 +73,7 @@ while True:
     
         # hsv 색공간에서 영역을 검출해서 합성
         # h : hue (색상)
-        # s : saturation (채도)
+        # s : saturation (채도) -> 색이 진한정도
         # v : value (명도)
         # h,s,v 각각 1byte
         hsv = cv2.cvtColor(frame1, cv2.COLOR_BGR2HSV)
