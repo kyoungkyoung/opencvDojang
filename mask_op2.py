@@ -7,10 +7,10 @@ src = cv2.imread('data2/cat.bmp')
 
 # 모든 행, 모든 열 0-2번 채널
 logo = logo[:,:,0:3]
-# print(img.shape)
+print(logo.shape)
 
 # 알파채널만 슬라이싱
-mask = logo[:,:,3]
+mask = logo[:,:,0:3]
 # print(mask.shape)
 
 # mask의 영역
@@ -26,6 +26,3 @@ cv2.imshow('logo', logo)
 cv2.imshow('mask',mask)
 cv2.waitKey()
 cv2.destroyAllWindows()
-
-
-

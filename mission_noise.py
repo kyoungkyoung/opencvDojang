@@ -19,6 +19,13 @@ def filterList(src):
     
     return filterList
 
+def imshowFunc(src, dst):
+    cv2.imshow('src', src)
+    cv2.imshow('dst', dst)
+    
+    cv2.waitKey()
+    cv2.destroyAllWindows()
+    
 def src1Image():
     src = cv2.imread('misson/01.png')
     imageLoadError(src)
@@ -145,10 +152,11 @@ def src6Image():
     cv2.waitKey()
     cv2.destroyAllWindows()
 
+    
 
 # src1Image()
 # src2Image()
 # src3Image()
 # src4Image()
 # src5Image()
-src6Image()
+# src6Image()
