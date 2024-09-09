@@ -18,7 +18,7 @@ pixMin, pixMax, _, _ = cv2.minMaxLoc(src)
 print('dfdfdfdf')
 print(pixMin, pixMax)
 
-# 1. dst값을 =으로 받을때는 2번째 파라미터를 None으로 줘서 return값을 받고,
+# 1. dst값을 =으로 받을때는 2번째 파라미터를 None으로 줘서 return값을 받고,                                        
 # 2. dst값을 2번째 파라미터 값으로 받을 수 있다 -> 첫번째 인자인 src값을 두번째 인자인 dst값으로 넘겨주는것
 # normalize()는 리턴값을 받는 방법이 두가지!
 # 이미지를 정규화 한다.

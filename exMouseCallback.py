@@ -8,8 +8,6 @@ import numpy as np
 pt1 = (0,0)
 pt2 = (0,0)
 
-
-
 def mouse_callback(event, x, y, flags, param):
     # global img, 
     global pt1, pt2
