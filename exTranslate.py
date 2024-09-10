@@ -15,7 +15,7 @@ def translate(src, x_move=0, y_move=0):
     
     return dst
 
-
+    
 def shear(src, x_shear=0, y_shear=0):
     if x_shear>0 and y_shear == 0:
         aff = np.array([[1, x_shear, 0][0,1,0]], dtype=np.float32)
