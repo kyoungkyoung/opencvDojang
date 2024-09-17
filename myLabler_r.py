@@ -8,6 +8,7 @@ ptListTxt = ''
 img = []
 result = []
 startPt = None
+fileList = []
 
 # 파일 목록 불러오기
 def getFileList():
@@ -36,6 +37,16 @@ def drawRec(img, ptList):
     result = cv2.addWeighted(img, 0.3, cpy, 0.7, 0)
     return result
 
+def saveTxtFile(txtFile):
+    global fileList
+    filename, ext = os.path.splitext(fileList[0])
+    txtFilePath = filename + '.txt'
+    print('filePath : {} , content : {}'.format(txtFilePath, txtFile))
+    
+    f = open(txtFilePath, 'w')
+    f.write(txtFile)
+    f.close()
+    
 
 # 마우스 콜백 함수
 def onMouse(event, x, y, flags, param):
@@ -69,7 +80,7 @@ def onMouse(event, x, y, flags, param):
             cv2.imshow('img', result)
     
 def main():
-    global img
+    global img, ptListTxt, fileList
     # 이미지 불러오기
     fileList = getFileList()
     # print(fileList)
@@ -79,7 +90,14 @@ def main():
     cv2.setMouseCallback('img', onMouse, [img])
     cv2.imshow('img', img)
     
-    cv2.waitKey()
+    while True:
+        key = cv2.waitKey()
+        if key == 27:
+            break
+        elif key == ord('s'):
+            saveTxtFile(ptListTxt)
+            break
+        
     cv2.destroyAllWindows()
 
 
